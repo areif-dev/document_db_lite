@@ -585,6 +585,4 @@ class Table:
 
 if __name__ == "__main__":
 
-    Customer = Table.get_table("petclub.db", "Customer")
-    for customer in Customer.fetchall():
-        print(customer, end="\n\n")
+    pass
