@@ -189,6 +189,12 @@ class Table:
         return self._fields
 
     def fetchall(self) -> List[Dict[str, Any]]:
+        """
+        Gets all records belonging to this Table
+
+        :return: A list of dictionaries containing all information this Table
+            is responsible for
+        """
 
         conn = sql.connect(self.db_loc)
         select_stmt = (
