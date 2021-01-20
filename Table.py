@@ -517,6 +517,9 @@ class Table:
             :return: A list of phrases and words taken from s
             """
 
+            if s == "":
+                return [""]
+
             # Clean up leading and trailing whitespace
             s = s.strip()
 
