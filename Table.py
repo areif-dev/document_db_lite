@@ -205,12 +205,9 @@ class Table:
         )
         resp = conn.execute(select_stmt).fetchall()
         conn.close()
-
-        if len(resp) == 0:
-            return []
         
         records = []
-        for rec in resp:
+        for rec in resp[1:]:
             records.append({"id": rec[0]})
 
             for i, field in enumerate(self._fields, 1):
