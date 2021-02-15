@@ -532,7 +532,7 @@ class Table:
             return [s]
 
         # Take exception if the field_to_search is not a field defined in Table
-        if field_to_search not in self._fields:
+        if field_to_search not in self._fields and field_to_search != "subrecords":
             raise InvalidRecordError(
                 f"{field_to_search} is not a field in {self.table_name}"
             )
